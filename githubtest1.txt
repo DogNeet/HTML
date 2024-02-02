@@ -1,0 +1,12 @@
+github test 1
+
+1. git add 로 기록할 파일을 고른다.
+2. 고른파일 기록명령은 git commit
+3. git add 한 부분을 staging area(스테이징)
+4. git add 한 부분을 repository(저장소)
+5. git add . == 모든 파일 스테이징
+6. git status == 상태창 열기
+7. git log --all --oneline == commit 내역 조회
+8. git init == repository 생성
+9. git push -u 저장소주소 main
+10. git remote add origin https://github.com/DogNeet/HTML.git == 저장소 주소를 origin 이라는 변수에 저장
