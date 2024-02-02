@@ -10,3 +10,11 @@ github test 1
 8. git init == repository 생성
 9. git push -u 저장소주소 main
 10. git remote add origin https://github.com/DogNeet/HTML.git == 저장소 주소를 origin 이라는 변수에 저장
+11. -u == 방금 입력한 주소를 기억하라는 뜻
+
+git push
+git add githubtest1.txt
+git commit -m '커밋'
+git push
+
+온라인 repository 에 저장됨
