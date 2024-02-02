@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="project.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container"> <!--전체적인 큰 박스-->
+        <div class="content"> <!--각각의 박스-->
+            <h3>Progress chart</h3>
+            <div class="progress-content">
+                <ul class="progress-name"> <!--이름 부분-->
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>Sass</li>
+                </ul>
+                <ul class="progress-chart"> <!--차트 부분-->
+                    <li>
+                        <div class="line">
+                            <div class="gauge" style="width: 43%;">&nbsp;</div>
+                        </div>
+                        <p class="number"></p>
+                    </li>
+                    <li>
+                        <div class="line">
+                            <div class="gauge" style="width: 72%;"></div>
+                        </div>
+                        <p class="number"></p>
+                    </li>
+                    <li>
+                        <div class="line">
+                            <div class="gauge" style="width: 53%;"></div>
+                        </div>
+                        <p class="number"></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content">
+            <h3>Donut chart</h3>
+            <div class="donut">
+                <div class="circle"></div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h3>Toggle Menu</h3>
+            <ul class="menu">
+                <i class="fa-solid fa-list fa-xl"></i>
+                <li class="main-menu"><a href="">1번 메뉴</a></li>
+                <li class="main-menu"><a href="">2번 메뉴</a></li>
+                <li class="main-menu"><a href="">3번 메뉴</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h3>Carousel</h3>
+            <div class="carousel_button">
+                <i class="fa-solid fa-angles-left"></i>
+                <i class="fa-solid fa-angles-right"></i>
+            </div>
+
+        </div>
+
+        <div class="content">
+            <h3>Alert Buttons</h3>
+            <button class="red">빨강</button>
+            <button class="blue">파랑</button>
+            <button class="green">초록</button>
+        </div>
+
+
+
+
+
+
+        <script>
+            fetch('https://shopping-mall-rzdwe.run.goorm.site/data')
+                .then(res => res.json())
+                .then(function (data) {
+                    document.querySelectorAll('.number')[0].innerHTML = data.progress[0] + '%'
+                    document.querySelectorAll('.number')[1].innerHTML = data.progress[1] + '%'
+                    document.querySelectorAll('.number')[2].innerHTML = data.progress[2] + '%'
+                })
+
+            document.getElementsByTagName('i')[0].addEventListener('click', function () {
+                document.getElementsByClassName('main-menu')[0].classList.toggle('open');
+                document.getElementsByClassName('main-menu')[1].classList.toggle('open');
+                document.getElementsByClassName('main-menu')[2].classList.toggle('open');
+            });
+
+        </script>
+
+</body>
+
+</html>
